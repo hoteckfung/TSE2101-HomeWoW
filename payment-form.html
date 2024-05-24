@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="owner-agent.css">
+    <link rel="stylesheet" href="payment-form.css">
+    <title>Payment | HomeWoW</title>
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <div class="payment container">
+            <form action="">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="title">billing address</h3>
+                        <div class="inputBox">
+                            <span>Full Name :</span>
+                            <input type="text" placeholder="Your Name">
+                        </div>
+                        <div class="inputBox">
+                            <span>Email :</span>
+                            <input type="email" placeholder="yourmail@gmail.com">
+                        </div>
+                        <div class="inputBox">
+                            <span>Address 1 :</span>
+                            <input type="text" placeholder="Street Address">
+                        </div>
+                        <div class="inputBox">
+                            <span>Address 2 :</span>
+                            <input type="text" placeholder="Town/City">
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>State :</span>
+                                <select class="custom-select">
+                                    <option>Johor</option>
+                                    <option>Kedah</option>
+                                    <option>Kelantan</option>
+                                    <option>Melaka</option>
+                                    <option>Negeri Sembilan</option>
+                                    <option>Pahang</option>
+                                    <option>Perak</option>
+                                    <option>Perlis</option>
+                                    <option>Pulau Pinang</option>
+                                    <option>Sabah</option>
+                                    <option>Sarawak</option>
+                                    <option>Selangor</option>
+                                    <option>Terengganu</option>
+                                </select>
+                            </div>
+                            <div class="inputBox">
+                                <span>Zip Code :</span>
+                                <input type="text" placeholder="12345">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3 class="title">Payment</h3>
+                        <div class="inputBox">
+                            <span>Cards Accepted :</span>
+                            <i class='bx bxl-paypal'></i>
+                            <i class='bx bxl-visa'></i>
+                            <i class='bx bxl-mastercard'></i>
+                        </div>
+                        <div class="inputBox">
+                            <span>Card Holder Name :</span>
+                            <input type="text" placeholder="Full Name">
+                        </div>
+                        <div class="inputBox">
+                            <span>Credit Card Number :</span>
+                            <input type="number" placeholder="1111-2222-3333-4444">
+                        </div>
+                        <div class="inputBox">
+                            <span>Expiry Month :</span>
+                            <input type="text" placeholder="January">
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Expiry Year :</span>
+                                <input type="number" placeholder="2020">
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV :</span>
+                                <input type="text" placeholder="1234">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Proceed to Checkout" class="submit-btn">
+                <input type="submit" value="Cancel" class="cancel-btn">
+            </form>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;800&display=swap');
+
+* {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+.payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    background: var(--grey);
+}
+
+.payment form {
+    padding: 20px;
+    width: 700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.payment form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.payment form .row .col {
+    flex: 1 1 250px;
+}
+
+.payment form .row .col .title {
+    font-size: 20px;
+    color: #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.payment form .row .col .inputBox {
+    margin: 15px 0;
+}
+
+.payment form .row .col .inputBox span {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.payment form .row .col .inputBox input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.payment form .row .col .inputBox input:focus {
+    border: 1px solid #000;
+}
+
+.payment form .row .col .flex {
+    display: flex;
+    gap: 15px;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.payment form .row .col .flex .custom-select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+    cursor: pointer;
+}
+
+.payment form .row .col .flex .inputBox {
+    margin-top: 5px;
+}
+
+.bx.bxl-paypal,
+.bx.bxl-visa,
+.bx.bxl-mastercard {
+    font-size: 40px;
+}
+
+.payment form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #27ae60;
+    color: #000000;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.payment form .submit-btn:hover {
+    background: #2ecc71;
+}
+
+.payment form .cancel-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #bb2020;
+    color: #000000;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.payment form .cancel-btn:hover {
+    background: #ff2929;
+}

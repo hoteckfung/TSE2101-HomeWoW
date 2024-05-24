@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="owner-agent.css">
+    <link rel="stylesheet" href="owner-agent-add-property.css">
+    <title>Owner/Agent | HomeWoW</title>
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a id="sidebar" href="#" class="logo">
+            <i class='bx bx-code-alt'></i>
+            <div class="logo-name"><span>Home</span>WoW</div>
+        </a>
+        <ul class="side-menu">
+            <li><a id="sidebar-dashboard" href="#"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li class="active"><a id="my-property" href="#"><i class='bx bx-home'></i>My Property ><br>Edit Property</a>
+            </li>
+            <li><a id="tenancy-agreement" href="#"><i class='bx bx-message-square-dots'></i>Tenancy
+                    Agreement<br>Request</a></li>
+            <li><a id="payment-log" href="#"><i class='bx bx-detail'></i>Payment Log</a></li>
+            <li><a id="appointment" href="#"><i class='bx bx-checkbox-checked'></i>Appointment</a></li>
+        </ul>
+        <ul class="side-menu">
+            <li><a id="edit-profile-link" href="#" class="edit-profile"><i class='bx bx bx-user'></i>Edit Profile</a>
+            </li>
+            <li><a id="contact-us" href="#" class="contact-us"><i class='bx bx bx-phone'></i>Contact Us</a></li>
+            <li><a href="/logout" class="logout"><i class='bx bx-log-out-circle'></i>Logout</a></li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">0</span>
+            </a>
+            <a id="navbar" href="#" class="profile">
+                <i class='bx bx-home-alt-2'></i>
+            </a>
+        </nav>
+
+        <!-- End of Navbar -->
+
+        <main>
+            <div class="header">
+                <div class="left">
+                    <h1>Update Property Information & Upload New Documents</h1>
+                </div>
+                <div class="bottom-data">
+                    <div class="orders">
+
+                        <label class="btn btn-outline-primary">
+                            Upload new photo
+                            <input type="file" class="account-settings-fileinput">
+                        </label> &nbsp;
+                        <label class="btn btn-outline-primary">
+                            Upload Property Documents
+                            <input type="file" class="account-settings-fileinput">
+                        </label> &nbsp;
+
+                        <div class="form-group">
+                            <label class="form-label">Property Name</label>
+                            <input id="name" type="text" class="form-control"
+                                placeholder="Building/Condominium/Apartment name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Location</label>
+                            <input id="location" type="text" class="form-control" placeholder="Location">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Rent Rm:</label>
+                            <input id="price" type="text" class="form-control mb-1" placeholder="Rm">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Description</label>
+                            <textarea id="description" class="form-control"
+                                placeholder="Any relevant useful information regarding the property"></textarea>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="form-label">Bedrooms</label>
+                            <select id="bedroom" class="custom-select">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Bathrooms</label>
+                            <select id="bathroom" class="custom-select">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+
+                        <div class="text-right mt-3">
+                            <button id="save-changes-button" type="button" class="btn btn-primary">Save
+                                Changes</button>&nbsp;
+                            <a id="go-back" href="#" type="button" class="btn btn-default">Go Back</a>
+                        </div>
+
+        </main>
+
+    </div>
+
+    <script src="owner-agent.js"></script>
+</body>
+<script>
+    window.onload = function () {
+        fetch('/current-user')
+            .then(response => response.json())
+            .then(user => {
+                // document.getElementById('account-name').textContent = user.name;
+
+                // Update the href of the anchor dashboard link
+                document.getElementById('sidebar-dashboard').href = `/owner-agent-dashboard.html?username=${user.name}&userType=${user.userType}&userId=${user.id}`;
+
+                // Update the href of the edit profile link
+                document.getElementById('edit-profile-link').href = `/edit-profile.html?username=${user.name}&userType=${user.userType}&userId=${user.id}`;
+
+                // Update the href of the sidebar home link
+                document.getElementById('sidebar').href = `/owner-agent.html?username=${user.name}&userType=${user.userType}&userId=${user.id}`;
+
+                // Update the href of the navbar home link
+                document.getElementById('navbar').href = `/owner-agent.html?username=${user.name}&userType=${user.userType}&userId=${user.id}`;
+
+                // Update the href of the my property link
+                document.getElementById('my-property').href = `/owner-agent-my-property.html?username=${user.name}&userType=${user.userType}&userId=${user.id}`;
+
+                // Update the href of the tenancy agreement link
+                document.getElementById('tenancy-agreement').href = `/owner-agent-tenancy-agreement-request.html?username=${user.name}&userType=${user.userType}&userId=${user.id}`;
+
+                // Update the href of the payment log link
+                document.getElementById('payment-log').href = `/owner-agent-payment-log.html?username=${user.name}&userType=${user.userType}&userId=${user.id}`;
+
+                // Update the href of the appointment link
+                document.getElementById('appointment').href = `/owner-agent-appointment.html?username=${user.name}&userType=${user.userType}&userId=${user.id}`;
+
+                // Update the href of the contact us link
+                document.getElementById('contact-us').href = `/owner-agent-contact-us.html?username=${user.name}&userType=${user.userType}&userId=${user.id}`;
+
+
+                document.getElementById('go-back').href = `/owner-agent-my-property.html?username=${user.name}&userType=${user.userType}&userId=${user.id}`;
+            })
+            .catch(error => console.error(error));
+    };
+</script>
+<script>
+    let ownerName = '';
+    fetch('/current-user')
+        .then(response => response.json())
+        .then(user => {
+            ownerName = user.name;
+        });
+    document.getElementById('save-changes-button').addEventListener('click', function () {
+        // Get the form data
+        const name = document.getElementById('name').value;
+        const location = document.getElementById('location').value;
+        const price = document.getElementById('price').value;
+        const description = document.getElementById('description').value;
+        const bedroom = document.getElementById('bedroom').value;
+        const bathroom = document.getElementById('bathroom').value;
+
+        // Get the propertyId from the URL
+        const urlParam = new URLSearchParams(window.location.search);
+        const propertyId = urlParam.get('propertyId');
+
+        // Create the request body
+        const body = {
+            name,
+            location,
+            price,
+            description,
+            bedroom,
+            bathroom,
+            ownerName
+        };
+
+        // Make a PUT request to the server
+        fetch(`/properties/${propertyId}`, {
+            method: 'put',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Property updated successfully!');
+                    document.getElementById('my-property').click();
+                } else {
+                    alert('There was an error updating the property');
+                }
+            })
+            .catch(err => {
+                console.error('There was an error updating the property:', err);
+            });
+    });
+</script>
+
+</html>

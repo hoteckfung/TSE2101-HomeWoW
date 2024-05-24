@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="index.html" class="logo"><i class='bx bx-home-alt-2'></i>HomeWoW</a>
+
+            <!-- Log In Button -->
+            <a href="login.html" class="btn">Log In</a>
+        </div>
+    </header>
+
+    <!-- Sign Up -->
+    <div class="login container">
+        <div class="login-container">
+            <h2>Welcome, Let's get started!</h2>
+            <p>Already have account <a href="login.html">Log In</a></p>
+            <!-- Login Form -->
+            <form action="/signup" method="post">
+                <span>Full Name</span>
+                <input type="text" name="name" placeholder="Your Name" required>
+
+                <span>Password</span>
+                <input type="password" name="password" placeholder="At least 8 characters" required>
+
+                <span>Email Address</span>
+                <input type="email" name="email" placeholder="yourmail@gmail.com" required>
+
+                <span>IC No.</span>
+                <input type="icNum" name="icNum" placeholder="YYMMDD-PB-###G" required>
+
+                <span>Phone</span>
+                <input type="tel" name="phone" placeholder="+60 (12) 345 6789" required>
+
+                <span>Gender</span>
+                <select class="input" name="gender" required>
+                    <option disabled selected>Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <span>User Type</span>
+                <select class="input" name="userType" required>
+                    <option disabled selected>User Type</option>
+                    <option value="Owner/Agent">Owner/Agent</option>
+                    <option value="tenant">Tenant</option>
+                    <option value="Admin">Admin</option>
+                </select>
+
+                <input type="submit" value="Sign Up" class="button">
+                <a href="login.html">Already have account?</a>
+            </form>
+            <a href="login.html" class="btn">Log In</a>
+        </div>
+        <!-- Log In Image -->
+        <div class="login-image">
+            <img src="img/signup.png" alt="">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container container">
+            <h2>HomeWoW</h2>
+            <p>HomeWoW isn't just about finding a place to stay – it's about discovering your ideal long-term
+                home. As a leading proptech innovator, HomeWoW is dedicated to building vibrant rental communities
+                tailored for long-term stays. Our O2O managed platform transforms existing properties into affordable
+                and inviting homes, specifically designed for young individuals seeking comfortable and budget-friendly
+                living solutions.</p>
+            <div class="footer-grid">
+                <div class="footer-box">
+                    <h3>Company</h3>
+                    <a href="why-us.html">Why Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-box">
+                    <h3>Locations</h3>
+                    <a href="https://maps.app.goo.gl/QPLvRfTfjxrRBpBv6" target="_blank">Cyberjaya</a>
+                    <a href="https://maps.app.goo.gl/KMQxeaNwS82jfaQY6" target="_blank">Kuala Lumpur</a>
+                    <a href="https://maps.app.goo.gl/pQNpoFHnwSWDx8126" target="_blank">Seri Kembangan</a>
+                </div>
+                <div class="footer-box">
+                    <h3>Social Media</h3>
+                    <div class="social">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i
+                                class='bx bxl-twitter'></i></a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i
+                                class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; HomeWoW All Right Reserved</p>
+    </div>
+</body>
+
+</html>
